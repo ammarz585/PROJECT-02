@@ -1,0 +1,11 @@
+SMART INVENTORY TRACKER - STATUS REPORT
+Status updated on: 03-07-2025 04:20 PM
+
+Total Items: 20
+Unique Items: 2
+Add Count: 2
+Remove Count: 0
+
+------ DETAILED STOCKS ------
+1. cpu - Quantity: 10
+2. leds - Quantity: 10
