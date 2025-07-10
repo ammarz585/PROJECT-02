@@ -17,10 +17,10 @@ class styling:
     def print_options(self):
         self.star_line()
         print(f"....................{dv.GREEN}OPTIONS MENU{dv.RESET}.................... ")
-        print(f"{dv.GREEN}1.{dv.RESET} {dv.BOLD}Add commands               {dv.GREEN}2.{dv.RESET} {dv.BOLD}Execute commands.{dv.RESET}")
-        print(f"{dv.GREEN}3.{dv.RESET} {dv.BOLD}Display all commands       {dv.GREEN}4.{dv.RESET} {dv.BOLD}View pending commands{dv.RESET}")
-        print(f"{dv.GREEN}5.{dv.RESET} {dv.BOLD}View executed commands     {dv.GREEN}6.{dv.RESET} {dv.BOLD}Commands status{dv.RESET}")
-        print(f"{dv.GREEN}7.{dv.RESET} {dv.BOLD}Delete command             {dv.GREEN}8.{dv.RESET} {dv.RED}{dv.BOLD}Exit command manager{dv.RESET}")
+        print(f"{dv.GREEN}{dv.BOLD}1.{dv.RESET} {dv.BOLD}Add commands               {dv.GREEN}2.{dv.RESET} {dv.BOLD}Execute commands.{dv.RESET}")
+        print(f"{dv.GREEN}{dv.BOLD}3.{dv.RESET} {dv.BOLD}Display all commands       {dv.GREEN}4.{dv.RESET} {dv.BOLD}View pending commands{dv.RESET}")
+        print(f"{dv.GREEN}{dv.BOLD}5.{dv.RESET} {dv.BOLD}View executed commands     {dv.GREEN}6.{dv.RESET} {dv.BOLD}Commands status{dv.RESET}")
+        print(f"{dv.GREEN}{dv.BOLD}7.{dv.RESET} {dv.BOLD}Delete command             {dv.GREEN}8.{dv.RESET} {dv.RED}{dv.BOLD}Exit command manager{dv.RESET}")
         self.star_line()
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -152,8 +152,8 @@ def status_info():
 
 def status_options():
         print(f"....................{dv.BOLD}{dv.GREEN}OPTIONS MENU{dv.RESET}.................... ")
-        print(f"{dv.GREEN}1.{dv.RESET} {dv.BOLD}show usage logs               {dv.GREEN}2.{dv.RESET} {dv.BOLD}status save option{dv.RESET}")
-        print(f"{dv.GREEN}3.{dv.RESET} {dv.BOLD}return to menu{dv.RESET}")
+        print(f"{dv.GREEN}{dv.BOLD}1.{dv.RESET} {dv.BOLD}show usage logs               {dv.GREEN}{dv.BOLD}2.{dv.RESET} {dv.BOLD}status save option{dv.RESET}")
+        print(f"{dv.GREEN}{dv.BOLD}3.{dv.RESET} {dv.BOLD}return to menu{dv.RESET}")
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
         
@@ -161,16 +161,16 @@ def menu_execution():
     s.clear_and_show_title()
     s.star_line()
     print(f"....................{dv.GREEN}EXECUTION MENU{dv.RESET}....................")
-    print(f"{dv.GREEN}1.{dv.RESET} {dv.BOLD}Execute next command          {dv.GREEN}2.{dv.RESET} {dv.BOLD}Execute by S.No{dv.RESET}")
-    print(f"{dv.GREEN}3.{dv.RESET} {dv.BOLD}Undo last execution           {dv.GREEN}4.{dv.RESET} {dv.BOLD}Redo last undo{dv.RESET}")
-    print(f"{dv.GREEN}5.{dv.RESET} {dv.RED}Return to main menu{dv.RESET}")
+    print(f"{dv.GREEN}{dv.BOLD}1.{dv.RESET} {dv.BOLD}Execute next command          {dv.GREEN}2.{dv.RESET} {dv.BOLD}Execute by S.No{dv.RESET}")
+    print(f"{dv.GREEN}{dv.BOLD}3.{dv.RESET} {dv.BOLD}Undo last execution           {dv.GREEN}4.{dv.RESET} {dv.BOLD}Redo last undo{dv.RESET}")
+    print(f"{dv.GREEN}{dv.BOLD}5.{dv.RESET} {dv.RED}Return to main menu{dv.RESET}")
     s.star_line()
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def save_options():
     print(f"....................{dv.GREEN}SAVE OPTIONS{dv.RESET}....................")
-    print(f"{dv.GREEN}1.{dv.RESET} {dv.BOLD}save status to file          {dv.GREEN}2.{dv.RESET} {dv.BOLD}cancel save{dv.RESET}")
+    print(f"{dv.GREEN}{dv.BOLD}1.{dv.RESET} {dv.BOLD}save status to file          {dv.GREEN}2.{dv.RESET} {dv.BOLD}cancel save{dv.RESET}")
     
 
 
