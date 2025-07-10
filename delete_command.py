@@ -1,5 +1,5 @@
 from style_and_layout import styling
-from display_all_commands import display_all
+from style_and_layout import display_all
 import global_data_variables as dv
 import heapq
 from datetime import datetime
@@ -57,7 +57,7 @@ def delete_command():
 
     if not sorted_commands:
         s.clear_and_show_title()
-        print("⚠️   No commands to delete.")
+        print(f"⚠️   No commands to {dv.RED}delete{dv.RESET}.")
         s.line()
         input("\nPress \033[1mENTER\033[0m to continue...")
         s.clear_and_show_title()
@@ -68,11 +68,11 @@ def delete_command():
         display_all()
         s.line()
 
-        user_input = input("Enter serial number to delete (or 'q' to cancel): ").strip()
+        user_input = input(f"{dv.YELLOW}Enter serial number to delete (or 'q' to cancel):{dv.RESET} ").strip()
 
         if user_input.lower() == 'q':
             s.line()
-            print("❎ Deletion cancelled.")
+            print(f"❎{dv.RED} Deletion cancelled.{dv.RESET}")
             s.line()
             input("\nPress \033[1mENTER\033[0m to return...")
             s.clear_and_show_title()
@@ -97,7 +97,7 @@ def delete_command():
 
         if delete_command_by_id(cmd_id):
             s.line()
-            print(f"✅  Command '\033[1m{cmd_to_delete['command']}\033[0m' with serial \033[1m{serial_no}\033[0m and ID '\033[1m{cmd_id}\033[0m' deleted.")
+            print(f"✅ {dv.RED} Command{dv.RESET} '\033[1m{cmd_to_delete['command']}\033[0m'{dv.RED} with serial{dv.RESET} \033[1m{serial_no}\033[0m {dv.RED}and ID{dv.RESET} '\033[1m{cmd_id}\033[0m' {dv.RED}deleted.{dv.RESET}")
         else:
             s.line()
             print("❌ Failed to delete command.")

@@ -8,7 +8,7 @@ def add_commands():
     s.clear_and_show_title()
     print(f"...............{dv.GREEN}COMMANDS QUEUEING CENTRE{dv.RESET}...............")
 
-    # Ask how many commands, support 'q' to cancel
+
     user_input = input(F"How many commands do you want to add {dv.RED}(or 'q' to cancel){dv.RESET}: ").strip().lower()
     if user_input == 'q':
         print(f"❎ {dv.RED}Adding Command  cancelled.{dv.RESET}")
@@ -49,11 +49,11 @@ def add_commands():
         dv.add_count += 1
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         dv.usage_log.append(f"{dv.BOLD}[{timestamp}]{dv.RESET} ➕ Added command: {command_text}")
-        print(f"✅ Added command \033[1m'{command_text}'\033[0m with priority \033[1m{priority}\033[0m")
+        print(f"✅ {dv.GREEN}Added successsfully.{dv.RESET}")
         s.line()
 
     s.line()
-    print("\033[1m✅ All commands added successfully.\033[0m")
+    print(f"\033[1m✅ {dv.GREEN}All commands added successfully.{dv.RESET}\033[0m")
     s.line()
     input("Press \033[1mENTER\033[0m to return to menu...")
     s.clear_and_show_title()

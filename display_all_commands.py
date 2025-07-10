@@ -1,4 +1,4 @@
-from style_and_layout import display_all,styling
+from style_and_layout import display_all_animated,styling
 import global_data_variables as dv
 s = styling()
 
@@ -14,7 +14,7 @@ def display():
     else:
         s.clear_and_show_title()
         print(f"..........{dv.BOLD}{dv.GREEN} COMMANDS TABLE{dv.RESET}..........")
-        display_all()
+        display_all_animated()
         s.line()
         input("\nPress \033[1mENTER\033[0m to return back to menu...")
         s.clear_and_show_title()

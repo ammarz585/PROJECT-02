@@ -6,7 +6,7 @@ def main():
     s = styling()
     s.print_title()
     while True:
-
+        
         s.print_options()
         user_input = input("enter option number: ").strip()
         if user_input == "":
@@ -26,7 +26,7 @@ def main():
                # input("\033[1mPress ENTER to continue..............\033[0m")
                 s.clear_and_show_title()
         except ValueError:
-            s.clear_and_show_title()
+            s.clear_and_show_title()    
 
        
 ##############################################################

@@ -29,11 +29,11 @@ def execute_command_by_serial():
     display_all()
     s.line()
     while True:
-        serial_input = input("Enter \033[1mS.No\033[0m to execute (or 'q' to cancel): ").strip()
+        serial_input = input(f"Enter \033[1mS.No\033[0m to execute (or {dv.RED}'q' to cancel{dv.RESET}): ").strip()
 
         if serial_input.lower() == 'q':
             s.line()
-            print("❎ Execution cancelled.")
+            print(f"❎ {dv.BLUE}Execution cancelled.{dv.RESET}")
             s.line()
             input("Press \033[1mENTER\033[0m to return to menu...")
             s.clear_and_show_title()
@@ -47,8 +47,8 @@ def execute_command_by_serial():
         serial_no = int(serial_input)
 
         if not (1 <= serial_no <= len(sorted_list)):
-            print("❌ Serial number out of range.")
-            input("Press \033[1mENTER\033[0m to try again...")
+            #print("❌ Serial number out of range.")
+            #input("Press \033[1mENTER\033[0m to try again...")
             
             s.clear_and_show_title()
             display_all()
@@ -87,7 +87,7 @@ def execute_command_by_serial():
 
         # Display result
         s.line()
-        print(f"✅ Executed command: \033[1m'{text}'\033[0m with priority \033[1m{prio}\033[0m.")
+        print(f"✅{dv.GREEN} Executed command:{dv.RESET} \033[1m'{text}'\033[0m with priority \033[1m{prio}\033[0m.")
         s.line()
         input("\nPress \033[1mENTER\033[0m to continue...")
         s.clear_and_show_title()
@@ -105,7 +105,7 @@ def option_1():
     display_all()
     while True:
         s.line()
-        user_input = input("Press \033[1mENTER\033[0m to execute top-priority or \033[1m'q'\033[0m to cancel: ").strip().lower()
+        user_input = input(f"Press \033[1mENTER\033[0m to execute top-priority or ({dv.RED}q to cancel{dv.RESET}): ").strip().lower()
         if user_input == '':
             break  
         elif user_input == 'q':
@@ -139,7 +139,7 @@ def option_1():
 
     s.line()
     if text:
-        print(f"✅ Executed: '\033[1m{text}\033[0m' with priority {prio}.")
+        print(f"✅ {dv.GREEN}Executed command:{dv.RESET} '\033[1m{text}\033[0m' with priority {prio}.")
     else:
         print(f"⚠️ Executed: [Unknown ID '{cmd_id}']")
     s.line()
