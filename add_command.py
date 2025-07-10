@@ -9,9 +9,9 @@ def add_commands():
     print(f"...............{dv.GREEN}COMMANDS QUEUEING CENTRE{dv.RESET}...............")
 
     # Ask how many commands, support 'q' to cancel
-    user_input = input("How many commands do you want to add (or 'q' to cancel): ").strip().lower()
+    user_input = input(F"How many commands do you want to add {dv.RED}(or 'q' to cancel){dv.RESET}: ").strip().lower()
     if user_input == 'q':
-        print("❎ Adding Command  cancelled.")
+        print(f"❎ {dv.RED}Adding Command  cancelled.{dv.RESET}")
         input("Press \033[1mENTER\033[0m to return to menu...")
         s.clear_and_show_title()
         return
@@ -24,12 +24,12 @@ def add_commands():
     s.line()
 
     for _ in range(count):
-        command_text = input(f"\033[1mEnter command number {_+1}:\033[0m ").strip()
+        command_text = input(f"\033[1mEnter {dv.GREEN}command number {_+1}{dv.RESET}: ").strip()
         if not command_text:
             print("⚠️ Empty command skipped.")
             continue
         try:
-            priority = int(input(f"\033[1mEnter command {_+1} priority:\033[0m "))
+            priority = int(input(f"\033[1mEnter command {_+1} {dv.YELLOW}priority:\033[0m "))
         except ValueError:
             print("⚠️ Invalid priority. Skipping this command.")
             continue
